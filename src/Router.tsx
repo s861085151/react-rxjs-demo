@@ -4,6 +4,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import DragBox from './DragBox';
 import Resizable1 from './Resizable';
 import Resizable2 from './Resizable/index2';
+import DragList from './DragList';
 
 export default () => {
   return (
@@ -13,6 +14,7 @@ export default () => {
         <Route exact path="/drag-box" component={DragBox} />
         <Route exact path="/resize1" component={Resizable1} />
         <Route exact path="/resize2" component={Resizable2} />
+        <Route exact path="/drag-list" component={DragList} />
       </Switch>
     </BrowserRouter>
   )
