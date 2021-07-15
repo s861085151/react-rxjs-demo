@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React from 'react'
 import { useEventCallback, useObservable } from 'rxjs-hooks'
-import { fromEvent, interval } from 'rxjs';
-import { withLatestFrom, takeUntil, delay, map, pluck, pairwise, distinctUntilChanged, switchMap } from 'rxjs/operators'
+import { fromEvent } from 'rxjs';
+import { withLatestFrom, takeUntil, delay, map, switchMap } from 'rxjs/operators'
 
 import './style.sass';
 
