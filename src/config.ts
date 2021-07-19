@@ -12,6 +12,8 @@ const ReactNav = [{
   value: '/react/effect'
 }, {
   value: '/react/context'
+}, {
+  value: '/react/memo'
 }]
 
 export { RxjsNav, ReactNav }

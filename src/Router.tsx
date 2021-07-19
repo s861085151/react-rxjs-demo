@@ -15,6 +15,7 @@ import Creat from './Rxjs/Creat';
 // react
 import Effect from './React/Effect';
 import Context from './React/Context';
+import Memo from './React/Memo';
 
 
 const Router = () => {
@@ -26,10 +27,11 @@ const Router = () => {
         <Route exact path="/rxjs/resize1" component={Resizable1} />
         <Route exact path="/rxjs/resize2" component={Resizable2} />
         <Route exact path="/rxjs/drag-list" component={DragList} />
-        <Route exact path="/creat" component={Creat} />
+        <Route exact path="/rxjs/creat" component={Creat} />
 
         <Route exact path="/react/effect" component={Effect} />
         <Route exact path="/react/context" component={Context} />
+        <Route exact path="/react/memo" component={Memo} />
       </Switch>
     </BrowserRouter>
   )
