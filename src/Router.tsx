@@ -1,28 +1,35 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
-import DragBox from './DragBox';
-import Resizable1 from './Resizable';
-import Resizable2 from './Resizable/index2';
-import DragList from './DragList';
+import Home from './Home';
+
+// rxjs
+import DragBox from './Rxjs/DragBox';
+import Resizable1 from './Rxjs/Resizable';
+import Resizable2 from './Rxjs/Resizable/index2';
+import DragList from './Rxjs/DragList';
+
+import Creat from './Rxjs/Creat';
 
 
-// components
+// react
+import Effect from './React/Effect';
+import Context from './React/Context';
 
-import Creat from './components/Creat';
-import Context from './components/Context';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={DragBox} />
-        <Route exact path="/drag-box" component={DragBox} />
-        <Route exact path="/resize1" component={Resizable1} />
-        <Route exact path="/resize2" component={Resizable2} />
-        <Route exact path="/drag-list" component={DragList} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/rxjs/drag-box" component={DragBox} />
+        <Route exact path="/rxjs/resize1" component={Resizable1} />
+        <Route exact path="/rxjs/resize2" component={Resizable2} />
+        <Route exact path="/rxjs/drag-list" component={DragList} />
         <Route exact path="/creat" component={Creat} />
-        <Route exact path="/context" component={Context} />
+
+        <Route exact path="/react/effect" component={Effect} />
+        <Route exact path="/react/context" component={Context} />
       </Switch>
     </BrowserRouter>
   )
