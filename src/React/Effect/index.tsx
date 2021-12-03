@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import './style.sass';
 
@@ -27,7 +27,7 @@ const UseEffect = () => {
 
 const UseLayoutEffect = () => {
 
-  const [state, setState] = useState<any>('hello world')
+  const [, setState] = useState<any>('hello world')
 
   const ref = useRef<any>(null)
   useLayoutEffect(() => {

@@ -1,4 +1,4 @@
-import React, { memo, useState, useCallback, useMemo } from 'react'
+import { memo, useState, useCallback, useMemo } from 'react'
 
 const ChildComp = memo(function ({ name, onClick }: any) {
   console.log('render child-comp ...')
@@ -13,7 +13,7 @@ function ParentComp() {
   const increment = () => setCount(count + 1)
 
   const [name, setName] = useState('hi~')
-  const [age, setAge] = useState(20)
+  const [age] = useState(20)
   const changeName = useCallback(
     (newName) => {
       setName(newName)

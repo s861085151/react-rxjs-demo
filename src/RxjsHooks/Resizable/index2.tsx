@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react'
-import { useEventCallback, useObservable } from 'rxjs-hooks'
-import { fromEvent, interval } from 'rxjs';
-import { withLatestFrom, takeUntil, throttleTime, map, pluck, pairwise, distinctUntilChanged, switchMap } from 'rxjs/operators'
+import React, { useRef } from 'react'
+import { useEventCallback } from 'rxjs-hooks'
+import { fromEvent } from 'rxjs';
+import { withLatestFrom, takeUntil, map, switchMap } from 'rxjs/operators'
 
 import './style.sass';
 
@@ -18,7 +18,7 @@ function DragBox() {
   const [onMouseDown, containerW] = useEventCallback<any, any, any>((event$, _, inputs$) => {
     return event$.pipe(
       withLatestFrom(inputs$.pipe(map(([ref]) => ref))),
-      switchMap(([event, ref]) => {
+      switchMap(([event, ref]: any) => {
         const style = getComputedStyle(ref.current);
         const width = parseFloat(style.getPropertyValue("width"));
         const startX = event.clientX;
